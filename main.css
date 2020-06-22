@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gainsboro;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.main {
+    width: 400px;
+    height: 500px;
+    margin: 50px auto 0 auto;
+}
+form[name="f1"]{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    position: relative;
+}
+
+h1 {
+    text-align: center
+}
+
+.main div {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.valid {
+    border-radius: 5px;
+    border: 1px solid lime;
+}
+
+.invalid1, .invalid2, .invalid3, .invalid4, .invalid5, .invalid6 {
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid silver;
+    position: relative;
+}
+
+input[type='text'], input[type='password'], input[type='number'] {
+    height: 100%;
+    padding-left: 10px;
+}
+
+input[type='text']:focus, input[type='password']:focus, input[type='number']:focus {
+    box-shadow: 0px 0px 10px 0px #3C93D5;
+}
+
+.btnUP {
+    height: 40px;
+    color: white;
+    background-color: dodgerblue;
+    border: 0;
+}
+
+.btnUP:hover {
+    background-color: rgb(21, 100, 179);
+    cursor: pointer;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+
+.valid:after {
+    position: absolute;
+    content: "✔";
+    color: lime;
+    z-index: 999;
+    top: 11px;
+    right: 15px;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+
+.invalid1:after, .invalid2:after, .invalid3:after, .invalid4:after, .invalid5:after, .invalid6:after {
+    position: absolute;
+    content: "✖";
+    color: red;
+    z-index: 999;
+    top: 11px;
+    right: 15px;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+.invalid1:before, .invalid2:before, .invalid3:before, .invalid4:before, .invalid5:before, .invalid6:before {
+    height: 18px;
+    position: absolute;
+    color: white;
+    background-color: red;
+    z-index: 999;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 12px;
+    top: 46px;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+.invalid1:before {
+    content: "Please provide a valid First name."
+}
+
+.invalid2:before {
+    content: "Please provide a valid Last name."
+}
+
+.invalid3:before {
+    content: "Please provide a valid Email address."
+}
+
+.invalid4:before {
+    content: "Please provide a valid Password."
+}
+.invalid5:before {
+    content: "LocalStorage is empty"
+}
+.invalid6:before {
+    content: "This Email already exist"
+}
+
+@keyframes example {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+label {
+    display: none
+}
+
+.label {
+    position: absolute;
+    z-index: 999;
+    font-size: 14px;
+    color: gray;
+    top: 12px;
+    left: 11px;
+    display: block;
+    transition: all 0.3s;
+    user-select: none;
+    cursor: text;
+}
+
+.up {
+    font-size: 12px;
+    top: 2px;
+}
+
+.padding {
+    padding-top: 14px
+}
+/* -------Please sign in---------- */
+.inNow {
+    position: absolute;
+    top: 500px;
+    color: blue;
+}
+
+.inNow:hover, .upNow:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.sign {
+    width: 400px;
+    height: 300px;
+    margin: 50px auto 0 auto;
+    font-family: 'Baloo Tamma 2', cursive;    
+}
+form[name='f2']{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.sign div {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.upNow {
+    position: absolute;
+    top: 300px;
+    color: blue;
+}
+
+.btnIn {
+    height: 40px;
+    color: white;
+    background-color: limegreen;
+    border: 0;
+    font-size: 1.1em;
+}
+
+.btnIn:hover {
+    background-color: rgb(44, 179, 44);
+    cursor: pointer;
+}
+
+
+
+.proFile {
+    width: 400px;
+    height: 400px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+}
+.img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(man.png);
+    background-size: cover;
+    background-position: center;
+    margin-top: 40px;
+}
+.text{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hidden {
+    display: none;
+}

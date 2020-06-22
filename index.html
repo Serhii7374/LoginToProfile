@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="main">
+        <form name="f1">
+            <h1>Please sign up</h1>
+            <div class="box1">
+                <label for="first" class="label l1" id="first">First name</label>
+                <input type="text" class="first" oninput="place()">
+            </div>
+            <div class="box2">
+                <label for="last" class="label l2" id="last">Last name</label>
+                <input type="text" class="last" oninput="place()">
+            </div>
+            <div class="box3">
+                <label for="email" class="label l3">Email address</label>
+                <input type="text" class="email" id="email" oninput="place()">
+            </div>
+            <div class="box4">
+                <label for="pass" class="label l4">Password</label>
+                <input type="password" class="pass" id="pass" oninput="place()">
+            </div>
+            <div>
+                <input type="button" value="Sign up" onclick="signUp()" class="btnUP">
+            </div>
+            <p class="inNow" onclick="signNow()">Sign in now</p>
+        </form>
+    </div>
+
+    <div class="sign hidden">
+        <form name="f2">
+            <h1>Please sign in</h1>
+            <div class="box2_3">
+                <label for="email2" class="label l5">Email address</label>
+                <input type="text" class="email2" id="email2" oninput="place()">
+            </div>
+            <div class="box2_4">
+                <label for="pass2" class="label l6">Password</label>
+                <input type="password" class="pass2" id="pass2" oninput="place()">
+            </div>
+            <div>
+                <input type="button" value="Sign in" onclick="signIn()" class="btnIn">
+            </div>
+            <p class="upNow" onclick="signNow()">Sign up now</p>
+        </form>
+    </div>
+    <div class="proFile hidden">
+        <div class="img"></div>
+        <div class="text">
+            <h2 class="userName"></h2>
+            <p class="userEmail"></p>
+            <p>Designer & Web Developing</p>
+        </div>
+        <input type="button" value="Sign Up" onclick="out()" class="btnIn">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
